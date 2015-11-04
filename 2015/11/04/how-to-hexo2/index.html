@@ -9,7 +9,7 @@
 _config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
 編集例（このサイトの場合）
 1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-記事を書く新しい記事">
+他の要素などについて">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexoでブログを作る2">
 <meta property="og:url" content="http://uratouri6.github.io/2015/11/04/how-to-hexo2/index.html">
@@ -18,15 +18,15 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
 _config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
 編集例（このサイトの場合）
 1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-記事を書く新しい記事">
-<meta property="og:updated_time" content="2015-11-04T17:08:56.000Z">
+他の要素などについて">
+<meta property="og:updated_time" content="2015-11-04T18:14:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexoでブログを作る2">
 <meta name="twitter:description" content="前回の記事の続きです。
 _config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
 編集例（このサイトの場合）
 1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-記事を書く新しい記事">
+他の要素などについて">
   
     <link rel="alternative" href="/atom.xml" title="&lt;urouro&gt;" type="application/atom+xml">
   
@@ -102,10 +102,11 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
 <h2 id="_config-ymlの編集">_config.ymlの編集</h2><p>_config.ymlを編集することで、ブログの名前などの変更が可能。</p>
 <p>編集例（このサイトの場合）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: &lt;urouro&gt;</span><br><span class="line">subtitle: 村田製作場日誌</span><br><span class="line">description: </span><br><span class="line">author: uratouri6</span><br><span class="line">language: ja</span><br><span class="line">timezone: Asia/Tokyo</span><br></pre></td></tr></table></figure>
-<h2 id="記事を書く">記事を書く</h2><p>新しい記事の追加。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [記事タイトル]</span><br></pre></td></tr></table></figure></p>
+<p>他の要素などについて、詳しくは<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">ここ。</a></p>
+<h2 id="記事を書く">記事を書く</h2><p>新しい記事の追加。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [記事タイトル]</span><br></pre></td></tr></table></figure></p>
 <p>source/_postsに[記事タイトル].mdが追加されているので、これを編集する。</p>
 <p>Markdownで書けるので、非常に楽。</p>
-<h2 id="テーマのインストール">テーマのインストール</h2><p>ブログの見た目を変えたい場合は、公開されているテーマをインストールする。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [テーマのURL] themes</span><br></pre></td></tr></table></figure></p>
+<h2 id="テーマのインストール">テーマのインストール</h2><p>ブログの見た目を変えたい場合は、公開されているテーマをインストールする。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> [テーマのURL] themes</span><br></pre></td></tr></table></figure></p>
 <p>_config.ymlファイルを編集し、テーマを適応する。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</span></span><br><span class="line"><span class="comment">## Themes: https://github.com/hexojs/hexo/wiki/Themes</span></span><br><span class="line">theme: [インストールしたテーマ名]</span><br><span class="line">exclude_generator:</span><br></pre></td></tr></table></figure>
 <p>themesフォルダ内を編集することで、自作することも可能。</p>
@@ -113,7 +114,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/how-to-hexo2/" data-id="cigl2e2gd0003bnik9qut6k94" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/how-to-hexo2/" data-id="cigl4deri0004o3ikjzxosus8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -123,6 +124,15 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/11/05/how-to-volumio/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ラズパイでネットワークミュージックプレイヤーを作る
+        
+      </div>
+    </a>
   
   
     <a href="/2015/11/04/how-to-hexo1/" id="article-nav-older" class="article-nav-link-wrap">
@@ -145,7 +155,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ラズパイ/">ラズパイ</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -154,7 +164,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+      <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/ラズパイ/" style="font-size: 10px;">ラズパイ</a>
     </div>
   </div>
 
@@ -163,7 +173,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -173,6 +183,10 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/11/05/how-to-volumio/">ラズパイでネットワークミュージックプレイヤーを作る</a>
+          </li>
         
           <li>
             <a href="/2015/11/04/how-to-hexo2/">hexoでブログを作る2</a>
