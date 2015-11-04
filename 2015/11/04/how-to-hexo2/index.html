@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>うろうろ日記</title>
+  <title>hexoでブログを作る2 | うろうろ日記</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="てきとうに">
-<meta property="og:type" content="website">
-<meta property="og:title" content="うろうろ日記">
-<meta property="og:url" content="http://uratouri6.github.io/index.html">
+  <meta name="description" content="前回の記事の続きです。
+記事を書く新しい記事の追加。1$ hexo new [記事タイトル]
+source/_postsに[記事タイトル].mdが追加されているので、これを編集する。
+Markdownで書けるので、非常に楽。
+テーマのインストールブログの見た目を変えたい場合は、公開されているテーマをインストールする。1$ git clone [テーマのURL] themes
+_config.yml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexoでブログを作る2">
+<meta property="og:url" content="http://uratouri6.github.io/2015/11/04/how-to-hexo2/index.html">
 <meta property="og:site_name" content="うろうろ日記">
-<meta property="og:description" content="てきとうに">
+<meta property="og:description" content="前回の記事の続きです。
+記事を書く新しい記事の追加。1$ hexo new [記事タイトル]
+source/_postsに[記事タイトル].mdが追加されているので、これを編集する。
+Markdownで書けるので、非常に楽。
+テーマのインストールブログの見た目を変えたい場合は、公開されているテーマをインストールする。1$ git clone [テーマのURL] themes
+_config.yml">
+<meta property="og:updated_time" content="2015-11-04T16:38:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="うろうろ日記">
-<meta name="twitter:description" content="てきとうに">
+<meta name="twitter:title" content="hexoでブログを作る2">
+<meta name="twitter:description" content="前回の記事の続きです。
+記事を書く新しい記事の追加。1$ hexo new [記事タイトル]
+source/_postsに[記事タイトル].mdが追加されているので、これを編集する。
+Markdownで書けるので、非常に楽。
+テーマのインストールブログの見た目を変えたい場合は、公開されているテーマをインストールする。1$ git clone [テーマのURL] themes
+_config.yml">
   
     <link rel="alternative" href="/atom.xml" title="うろうろ日記" type="application/atom+xml">
   
@@ -63,9 +79,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-how-to-hexo2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-how-to-hexo2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/04/how-to-hexo2/" class="article-date">
   <time datetime="2015-11-04T06:07:45.000Z" itemprop="datePublished">2015-11-04</time>
@@ -78,8 +92,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/how-to-hexo2/">hexoでブログを作る2</a>
+    <h1 class="article-title" itemprop="name">
+      hexoでブログを作る2
     </h1>
   
 
@@ -107,72 +121,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-how-to-hexo1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/04/how-to-hexo1/" class="article-date">
-  <time datetime="2015-11-03T17:03:16.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/how-to-hexo1/">hexoでブログを作る1</a>
-    </h1>
+    <a href="/2015/11/04/how-to-hexo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexoでブログを作る1</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。</p>
-<h2 id="hexoとは">hexoとは</h2><p>hexo とは、node.js で作成された静的サイトジェネレータ。</p>
-<p>Github Pagesと組み合わせることで、簡単にブログを作ることができる。</p>
-<h2 id="環境構築">環境構築</h2><ul>
-<li><p>Node.jsをインストール。</p>
-</li>
-<li><p>Github Pagesのリポジトリを作る。</p>
-</li>
-<li><p>Githubに秘密鍵を登録し、SSHでpushできるようにする。</p>
-</li>
-</ul>
-<h2 id="hexoをインストール">hexoをインストール</h2><p>hexoをインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure></p>
-<p>ブログのフォルダを作成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [フォルダ名]</span><br></pre></td></tr></table></figure></p>
-<p>作成したフォルダへ移動し、モジュールをダウンロード。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [フォルダ名]</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<h2 id="ローカルサーバーの立ち上げ">ローカルサーバーの立ち上げ</h2><p>ローカルサーバーを立ち上げる。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>にアクセスし、ブログができていることを確認。</p>
-<p>確認できたら、Ctrl + C でサーバーを止める。</p>
-<h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>gitのdeployerをインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>ブログのフォルダ内にある、_config.ymlというファイルで、ブログの設定を行うことができる。</p>
-<p>エディタを使い、_config.ymlのDeploymentを以下のように編集する。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[ユーザーのID]/[ユーザーのID].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>htmlを生成し、Githubへアップロード<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure></p>
-<p>Github Pagesを確認してみると、ブログができている。タイムラグあり。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/how-to-hexo1/" data-id="cigl0vpon000022ikzk0tqiqa" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
