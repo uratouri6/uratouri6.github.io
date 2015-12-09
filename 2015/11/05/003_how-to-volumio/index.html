@@ -8,43 +8,39 @@
   <meta name="description" content="昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、音質の劣化や反応の遅れがあり、Volumioを導入することにしました。
 必要機材
 Raspberry Pi（今回はB+を使用）
-
 SDカード
-
 USBメモリ（音楽ファイル保存用）
-
 DAC + スピーカー（今回はJBLのpebblesを使用）
+セルフパワーのUSBハブ（DACの電源が足りない為）
 
-セルフパワーのUSBハブ（DACの電源が足りない為）">
+Vol">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ラズパイでネットワークミュージックプレイヤーを作る">
-<meta property="og:url" content="http://uratouri6.github.io/2015/11/05/how-to-volumio/index.html">
+<meta property="og:url" content="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/index.html">
 <meta property="og:site_name" content="<urouro>">
 <meta property="og:description" content="昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、音質の劣化や反応の遅れがあり、Volumioを導入することにしました。
 必要機材
 Raspberry Pi（今回はB+を使用）
-
 SDカード
-
 USBメモリ（音楽ファイル保存用）
-
 DAC + スピーカー（今回はJBLのpebblesを使用）
+セルフパワーのUSBハブ（DACの電源が足りない為）
 
-セルフパワーのUSBハブ（DACの電源が足りない為）">
-<meta property="og:updated_time" content="2015-12-09T14:57:17.000Z">
+Vol">
+<meta property="og:image" content="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/volumio.png">
+<meta property="og:image" content="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/iPhone.png">
+<meta property="og:updated_time" content="2015-12-09T15:20:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ラズパイでネットワークミュージックプレイヤーを作る">
 <meta name="twitter:description" content="昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、音質の劣化や反応の遅れがあり、Volumioを導入することにしました。
 必要機材
 Raspberry Pi（今回はB+を使用）
-
 SDカード
-
 USBメモリ（音楽ファイル保存用）
-
 DAC + スピーカー（今回はJBLのpebblesを使用）
+セルフパワーのUSBハブ（DACの電源が足りない為）
 
-セルフパワーのUSBハブ（DACの電源が足りない為）">
+Vol">
   
     <link rel="alternative" href="/atom.xml" title="&lt;urouro&gt;" type="application/atom+xml">
   
@@ -94,9 +90,9 @@ DAC + スピーカー（今回はJBLのpebblesを使用）
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-how-to-volumio" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-003_how-to-volumio" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/05/how-to-volumio/" class="article-date">
+    <a href="/2015/11/05/003_how-to-volumio/" class="article-date">
   <time datetime="2015-11-04T17:15:28.000Z" itemprop="datePublished">2015-11-05</time>
 </a>
     
@@ -118,16 +114,11 @@ DAC + スピーカー（今回はJBLのpebblesを使用）
       
         <p>昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、<br>音質の劣化や反応の遅れがあり、Volumioを導入することにしました。</p>
 <h2 id="必要機材">必要機材</h2><ul>
-<li><p>Raspberry Pi（今回はB+を使用）</p>
-</li>
-<li><p>SDカード</p>
-</li>
-<li><p>USBメモリ（音楽ファイル保存用）</p>
-</li>
-<li><p>DAC + スピーカー（今回はJBLのpebblesを使用）</p>
-</li>
-<li><p>セルフパワーのUSBハブ（DACの電源が足りない為）</p>
-</li>
+<li>Raspberry Pi（今回はB+を使用）</li>
+<li>SDカード</li>
+<li>USBメモリ（音楽ファイル保存用）</li>
+<li>DAC + スピーカー（今回はJBLのpebblesを使用）</li>
+<li>セルフパワーのUSBハブ（DACの電源が足りない為）</li>
 </ul>
 <h2 id="Volumioのインストール">Volumioのインストール</h2><p>Mac環境でのインストール方法です。</p>
 <p><a href="https://volumio.org/get-started/" target="_blank" rel="external">Volumioのサイト</a>から、イメージファイルの最新版をダウンロードしてください。</p>
@@ -139,7 +130,7 @@ DAC + スピーカー（今回はJBLのpebblesを使用）
 <h2 id="Volumioの起動">Volumioの起動</h2><p>SDカードをセットしたラズパイに、LANケーブルを接続して電源をつなぐと、<br>Volumioが起動します。</p>
 <p>デフォルトでAirPlayが有効になっているため、手持ちのiPhoneからAirPlayを選択すると、<br>スピーカーから音楽を再生することができます。</p>
 <h2 id="Volumioの設定">Volumioの設定</h2><p>Webブラウザから<a href="http://volumio.local" target="_blank" rel="external">http://volumio.local</a>にアクセスすると、以下のような画面が表示されます。</p>
-
+<img src="/2015/11/05/003_how-to-volumio/volumio.png" alt="Volumio.local" title="Volumio.local">
 <p>右上のMENUから様々な設定を変えることができます。</p>
 <h2 id="設定例">設定例</h2><p>ここまでの作業でAirPlayを使うことができるのですが、AirPlayは個人的に使いづらいため、<br>ローカルに置いた音楽ファイルをラズパイで再生し、ネットワーク経由で操作を行うことにします。</p>
 <p>まず、Volumio.localの設定画面から以下の変更を行います。</p>
@@ -152,33 +143,35 @@ DAC + スピーカー（今回はJBLのpebblesを使用）
 <p>次に、ローカルで音楽ファイルを用意します。<br>NAS等との接続もできますが、今回はUSBメモリに音楽ファイルを用意し、ラズパイにセットしました。</p>
 <p>Volumio.localの左下にあるBrowseからUSBを選び、再生したい曲をプレイリストに登録すると、再生できるようになります。</p>
 <p>再生についての操作は、Volumio.localから行います。<br>iPhoneからVolumio.localにアクセスした場合でも、同様に操作することができます。</p>
-
+<img src="/2015/11/05/003_how-to-volumio/iPhone.png" alt="iPhoneからの操作" title="iPhoneからの操作">
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/05/how-to-volumio/" data-id="cigl4der40003o3iktb6nqslm" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cihyyihbh0006lkikvkckrosw" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2015/12/09/004_raspi-camera1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/05/how-to-volumio/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ラズパイで多機能監視カメラを作る(1)
+          ラズパイでネットワークミュージックプレイヤーを作る
         
       </div>
     </a>
   
   
-    <a href="/2015/11/05/003_how-to-volumio/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/04/how-to-hexo2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ラズパイでネットワークミュージックプレイヤーを作る</div>
+      <div class="article-nav-title">hexoでブログを作る2</div>
     </a>
   
 </nav>
