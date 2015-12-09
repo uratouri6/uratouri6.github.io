@@ -65,78 +65,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-raspi-camera1 のコピー" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/09/raspi-camera1 のコピー/" class="article-date">
-  <time datetime="2015-12-09T07:40:31.000Z" itemprop="datePublished">2015-12-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/09/raspi-camera1 のコピー/">ラズパイで多機能監視カメラを作る(1)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ラズパイを使って、監視カメラを作ってみます。<br>監視カメラはいろいろな方法で実現できるのですが、今回はmotionを使います。<br>motionを使うことで、動体検知や映像のストリーミングが簡単に行えます。</p>
-<h2 id="用意するもの">用意するもの</h2><ul>
-<li>ラズパイ一式</li>
-<li>USBカメラ</li>
-</ul>
-<h2 id="motionの導入">motionの導入</h2><p>パッケージを更新し、motionをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get install motion</span><br></pre></td></tr></table></figure></p>
-<h2 id="motionの設定">motionの設定</h2><p>motionの設定は、motion.confで変えることができます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/motion/motion.conf</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p><strong>daemon</strong> off<br>デーモンモードで起動するか設定します。<br>この時点ではoffにしておきます。</p>
-</li>
-<li><p><strong>width</strong> 640<br>撮影する映像の横の解像度を設定します。</p>
-</li>
-<li><p><strong>height</strong> 480<br>撮影する映像の縦の解像度を設定します。</p>
-</li>
-<li><p><strong>framerate</strong> 20<br>撮影する映像のフレームレートを設定します。</p>
-</li>
-<li><p><strong>threshold</strong> 2000<br>動体検知のしきい値を設定します。<br>設定したピクセル数以上の変化があった場足、映像の録画が始まります。</p>
-</li>
-<li><p><strong>event_gap</strong> 60<br>動体検知で録画する間隔を設定します。<br>映像の録画後、設定した秒数以内に再び動きが検知された場合、一つの映像として保存されます。</p>
-</li>
-<li><p><strong>output_pictures</strong> off<br>動きが検知された場合に静止画を保存するか設定します。</p>
-</li>
-<li><p><strong>ffmpeg_output_movies</strong> on<br>動きが検知された場合に映像を保存するか設定します。</p>
-</li>
-<li><p><strong>target_dir</strong> motion/file<br>ファイルの保存先を指定します。</p>
-</li>
-<li><p><strong>movie_filename</strong> %Y%m%d%H%M%S<br>保存する映像ファイルの名前を設定します。</p>
-</li>
-<li><p><strong>stream_maxrate</strong> 20<br>ストリーミング配信のフレームレートを設定します。</p>
-</li>
-<li><p><strong>stream_localhost</strong> off<br>ストリーミング配信をローカルホストに限定するか設定します。</p>
-</li>
-</ul>
-<h2 id="motionの起動">motionの起動</h2><p>motionを起動します<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo motion</span><br></pre></td></tr></table></figure></p>
-<p>起動後、撮影している画面内で動きが検知されると、aviファイルとして保存されます。</p>
-<p>また、ブラウザからラズパイのIPアドレスの8081ポートにアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/09/raspi-camera1 のコピー/" data-id="cihyyfv9c0000lkik9nism2cu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-004_raspi-camera1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/09/004_raspi-camera1/" class="article-date">
@@ -199,84 +127,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cihyyj31r0008lkikmgbtk6ds" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cihyzn67y0003zyik34hzxd1u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-volumio" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/05/how-to-volumio/" class="article-date">
-  <time datetime="2015-11-04T17:15:28.000Z" itemprop="datePublished">2015-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/05/how-to-volumio/">ラズパイでネットワークミュージックプレイヤーを作る</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、<br>音質の劣化や反応の遅れがあり、Volumioを導入することにしました。</p>
-<h2 id="必要機材">必要機材</h2><ul>
-<li><p>Raspberry Pi（今回はB+を使用）</p>
-</li>
-<li><p>SDカード</p>
-</li>
-<li><p>USBメモリ（音楽ファイル保存用）</p>
-</li>
-<li><p>DAC + スピーカー（今回はJBLのpebblesを使用）</p>
-</li>
-<li><p>セルフパワーのUSBハブ（DACの電源が足りない為）</p>
-</li>
-</ul>
-<h2 id="Volumioのインストール">Volumioのインストール</h2><p>Mac環境でのインストール方法です。</p>
-<p><a href="https://volumio.org/get-started/" target="_blank" rel="external">Volumioのサイト</a>から、イメージファイルの最新版をダウンロードしてください。</p>
-<p>SDカードをMacに挿入し、dfコマンドでデバイス情報を表示させます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ df</span><br></pre></td></tr></table></figure></p>
-<p>デバイス情報が一覧で表示されるので、SDカードのデバイス名を確認してください。<br>例:/dev/disk4s1</p>
-<p>SDカードをアンマウントします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo diskutil unmount /dev/disk4s1</span><br></pre></td></tr></table></figure></p>
-<p>ダウンロードしたイメージファイルをSDカードに書き込みます。<br>この時、デバイス名を/dev/disk4s1から/dev/rdisk4にしてください。<br>書き込みは数分かかります。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dd bs=<span class="number">1</span>m <span class="keyword">if</span>=[イメージファイルのパス] of=/dev/rdisk4</span><br></pre></td></tr></table></figure></p>
-<p>書き込みが終わったら、ラズパイにSDカードをセットします。</p>
-<h2 id="Volumioの起動">Volumioの起動</h2><p>SDカードをセットしたラズパイに、LANケーブルを接続して電源をつなぐと、<br>Volumioが起動します。</p>
-<p>デフォルトでAirPlayが有効になっているため、手持ちのiPhoneからAirPlayを選択すると、<br>スピーカーから音楽を再生することができます。</p>
-<h2 id="Volumioの設定">Volumioの設定</h2><p>Webブラウザから<a href="http://volumio.local" target="_blank" rel="external">http://volumio.local</a>にアクセスすると、以下のような画面が表示されます。</p>
-
-<p>右上のMENUから様々な設定を変えることができます。</p>
-<h2 id="設定例">設定例</h2><p>ここまでの作業でAirPlayを使うことができるのですが、AirPlayは個人的に使いづらいため、<br>ローカルに置いた音楽ファイルをラズパイで再生し、ネットワーク経由で操作を行うことにします。</p>
-<p>まず、Volumio.localの設定画面から以下の変更を行います。</p>
-<ul>
-<li>AirPlayをOFFに</li>
-<li>Volume control mixer の Mixer type をdisableに</li>
-</ul>
-<p>Mixer type をdisableにしたことで、Volumio.localのページからスピーカーの音量を操作できないようにしました。<br>これにより、あらかじめ決めた音量での再生しかできなくなりますが、操作ミスによる爆音再生を防ぐことができます。</p>
-<p>スピーカーの音量の設定は、ラズパイにSSHで接続し、以下のコマンドで行ってください。<br>ラズパイのIPアドレスは、Volumio.localのNetworkから調べることができます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alsamixer</span><br></pre></td></tr></table></figure></p>
-<p>次に、ローカルで音楽ファイルを用意します。<br>NAS等との接続もできますが、今回はUSBメモリに音楽ファイルを用意し、ラズパイにセットしました。</p>
-<p>Volumio.localの左下にあるBrowseからUSBを選び、再生したい曲をプレイリストに登録すると、再生できるようになります。</p>
-<p>再生についての操作は、Volumio.localから行います。<br>iPhoneからVolumio.localにアクセスした場合でも、同様に操作することができます。</p>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/05/how-to-volumio/" data-id="cigl4der40003o3iktb6nqslm" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -342,59 +197,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cihyyihbh0006lkikvkckrosw" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cihyzn6830006zyik39d0qezk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-hexo2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/04/how-to-hexo2/" class="article-date">
-  <time datetime="2015-11-04T06:07:45.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/how-to-hexo2/">hexoでブログを作る2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前回の記事の続きです。</p>
-<h2 id="_config-ymlの編集">_config.ymlの編集</h2><p>_config.ymlを編集することで、ブログの名前などの変更が可能。</p>
-<p>編集例（このサイトの場合）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: &lt;urouro&gt;</span><br><span class="line">subtitle: 村田製作場日誌</span><br><span class="line">description: </span><br><span class="line">author: uratouri6</span><br><span class="line">language: ja</span><br><span class="line">timezone: Asia/Tokyo</span><br></pre></td></tr></table></figure>
-<p>他の要素などについて、詳しくは<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">ここ。</a></p>
-<h2 id="記事を書く">記事を書く</h2><p>新しい記事の追加。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [記事タイトル]</span><br></pre></td></tr></table></figure></p>
-<p>source/_postsに[記事タイトル].mdが追加されているので、これを編集する。</p>
-<p>Markdownで書けるので、非常に楽。</p>
-<h2 id="テーマのインストール">テーマのインストール</h2><p>ブログの見た目を変えたい場合は、公開されているテーマをインストールする。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [テーマのURL] themes</span><br></pre></td></tr></table></figure></p>
-<p>_config.ymlファイルを編集し、テーマを適応する。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</span></span><br><span class="line"><span class="comment">## Themes: https://github.com/hexojs/hexo/wiki/Themes</span></span><br><span class="line">theme: [インストールしたテーマ名]</span><br><span class="line">exclude_generator:</span><br></pre></td></tr></table></figure>
-<p>themesフォルダ内を編集することで、自作することも可能。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/how-to-hexo2/" data-id="cigl4deri0004o3ikjzxosus8" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -440,70 +247,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cihyyi3fy0004lkik0iah8x6q" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cihyzn6890008zyikpm1jiev7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-hexo1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/04/how-to-hexo1/" class="article-date">
-  <time datetime="2015-11-03T17:03:16.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/how-to-hexo1/">hexoでブログを作る1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。</p>
-<h2 id="hexoとは">hexoとは</h2><p>hexo とは、node.js で作成された静的サイトジェネレータ。</p>
-<p>Github Pagesと組み合わせることで、簡単にブログを作ることができる。</p>
-<h2 id="環境構築">環境構築</h2><ul>
-<li><p>Node.jsをインストール。</p>
-</li>
-<li><p>Github Pagesのリポジトリを作る。</p>
-</li>
-<li><p>Githubに秘密鍵を登録し、SSHでpushできるようにする。</p>
-</li>
-</ul>
-<h2 id="hexoをインストール">hexoをインストール</h2><p>hexoをインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure></p>
-<p>ブログのフォルダを作成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [フォルダ名]</span><br></pre></td></tr></table></figure></p>
-<p>作成したフォルダへ移動し、モジュールをダウンロード。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [フォルダ名]</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<h2 id="ローカルサーバーの立ち上げ">ローカルサーバーの立ち上げ</h2><p>ローカルサーバーを立ち上げる。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>にアクセスし、ブログができていることを確認。</p>
-<p>確認できたら、Ctrl + C でサーバーを止める。</p>
-<h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>gitのdeployerをインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>ブログのフォルダ内にある、_config.ymlというファイルで、ブログの設定を行うことができる。</p>
-<p>エディタを使い、_config.ymlのDeploymentを以下のように編集する。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[ユーザーのID]/[ユーザーのID].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>htmlを生成し、Githubへアップロード<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure></p>
-<p>Github Pagesを確認してみると、ブログができている。タイムラグあり。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/how-to-hexo1/" data-id="cigl4deqt0000o3ikljeucxqr" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -557,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/" data-id="cihyyhm0y0002lkik9wq5pgj8" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/" data-id="cihyzn67n0000zyiklr7l0yhg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -598,7 +346,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -610,15 +358,7 @@
       <ul>
         
           <li>
-            <a href="/2015/12/09/raspi-camera1 のコピー/">ラズパイで多機能監視カメラを作る(1)</a>
-          </li>
-        
-          <li>
             <a href="/2015/12/09/004_raspi-camera1/">ラズパイで多機能監視カメラを作る(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/05/how-to-volumio/">ラズパイでネットワークミュージックプレイヤーを作る</a>
           </li>
         
           <li>
@@ -626,7 +366,11 @@
           </li>
         
           <li>
-            <a href="/2015/11/04/how-to-hexo2/">hexoでブログを作る2</a>
+            <a href="/2015/11/04/002_how-to-hexo2/">hexoでブログを作る(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/04/001_how-to-hexo1/">hexoでブログを作る(1)</a>
           </li>
         
       </ul>
