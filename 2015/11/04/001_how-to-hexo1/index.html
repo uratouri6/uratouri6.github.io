@@ -23,7 +23,8 @@ Github Pagesと組み合わせることで、簡単にブログを作ること�
 Node.jsをインストール。
 Github Pagesのリポジトリを作る。
 Githubに秘密鍵を登録し、SSHでpush">
-<meta property="og:updated_time" content="2015-12-09T15:20:12.000Z">
+<meta property="og:image" content="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/hexo.png">
+<meta property="og:updated_time" content="2015-12-13T17:43:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexoでブログを作る(1)">
 <meta name="twitter:description" content="日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。
@@ -116,14 +117,15 @@ Githubに秘密鍵を登録し、SSHでpush">
 <p>ブログのフォルダを作成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [フォルダ名]</span><br></pre></td></tr></table></figure></p>
 <p>作成したフォルダへ移動し、モジュールをダウンロード。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [フォルダ名]</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <h2 id="ローカルサーバーの立ち上げ">ローカルサーバーの立ち上げ</h2><p>ローカルサーバーを立ち上げる。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>にアクセスし、ブログができていることを確認。</p>
+<p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>にアクセスし、ブログが表示されていることを確認。</p>
+<img src="/2015/11/04/001_how-to-hexo1/hexo.png" alt="初期状態のブログ" title="初期状態のブログ">
 <p>確認できたら、Ctrl + C でサーバーを止める。</p>
 <h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>gitのdeployerをインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>ブログのフォルダ内にある、_config.ymlというファイルで、ブログの設定を行うことができる。</p>
 <p>エディタを使い、_config.ymlのDeploymentを以下のように編集する。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[ユーザーのID]/[ユーザーのID].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>htmlを生成し、Githubへアップロード<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure></p>
-<p>Github Pagesを確認してみると、ブログができている。タイムラグあり。</p>
+<p>Github Pagesの自分のページを確認してみると、ブログがアップされている。タイムラグあり。</p>
 
       
     </div>
