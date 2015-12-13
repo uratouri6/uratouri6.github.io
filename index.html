@@ -65,6 +65,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-005-raspi-camera2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/14/005-raspi-camera2/" class="article-date">
+  <time datetime="2015-12-13T16:10:23.000Z" itemprop="datePublished">2015-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前回までの作業では、限られたブラウザでしか映像を見ることができませんでした。<br>今回は、他のブラウザやスマートフォンで映像を見れるようにします。<br>また、動きを検知した時にスピーカーから音を鳴らすようにします。</p>
+<h2 id="追加で用意するもの">追加で用意するもの</h2><ul>
+<li>スピーカー</li>
+</ul>
+<img src="/2015/12/14/005-raspi-camera2/speaker.png" alt="100均で買ったスピーカー" title="100均で買ったスピーカー">
+<h2 id="Apache2のインストール">Apache2のインストール</h2><p>ラズパイをWebサーバーとして使うため、Apache2をインストールします。</p>
+<p>まずパッケージを更新。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>Apache2をインストール。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install apache2</span><br></pre></td></tr></table></figure></p>
+<p>インストールが終わったらPCのブラウザからhttp&#x3a;//[ラズパイのIPアドレス]にアクセスしてみます。</p>
+<img src="/2015/12/14/005-raspi-camera2/web.png" alt="webページ" title="webページ">
+<p>Apache2のwebページのディレクトリは/var/www/html/になります。<br>つまり、http&#x3a;//[ラズパイのIPアドレス]にアクセスすると、/var/www/html/index.htmlの内容が表示されます。</p>
+<h2 id="ストリーミング配信">ストリーミング配信</h2><p>ストリーミング配信用のテストページを作ります。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /var/www/html</span><br><span class="line">$ touch test.html</span><br></pre></td></tr></table></figure></p>
+<p>テストページの内容を編集します。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim test.html</span><br></pre></td></tr></table></figure></p>
+<p>以下の内容を書きます。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">htmld</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Motion<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://[ラズパイのIPアドレス]:8081"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>imgタグでmotionの映像を表示させるだけですが、これでChromeなどのブラウザや、スマートフォンから映像を見れるようになります。<br>http&#x3a;//[ラズパイのIPアドレス]/test.htmlにアクセスしてみます。</p>
+<img src="/2015/12/14/005-raspi-camera2/stream.png" alt="test.html" title="test.html">
+<h2 id="スピーカを鳴らす">スピーカを鳴らす</h2><p>動きを検知し、撮影が始まるタイミングで音が鳴るようにしましょう。<br>適当な.wavの音楽ファイルを用意します。<br>ここでは、alert.wavというファイルをhome/pi/motionに用意しました。</p>
+<p>motion.confを編集します。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/motion/motion.conf</span><br></pre></td></tr></table></figure></p>
+<p>600行目あたりにある、on_movie_startを編集します。<br>on_movie_startは、動体を検知したタイミングで動作するため、ここで音を鳴らすように設定します。<br>aplayはwavファイルを再生するコマンドです。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">on_movie_start <span class="string">"aplay /home/pi/motion/alert.wav"</span></span><br></pre></td></tr></table></figure></p>
+<p>これで、動体検知時にスピーカーから音が鳴るようになりました。<br>スピーカーの音量は、alsamixerコマンド等から設定できます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alsamixer</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://uratouri6.github.io/2015/12/14/005-raspi-camera2/" data-id="cii4quy0r00034mikgzjfqke2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-004_raspi-camera1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/09/004_raspi-camera1/" class="article-date">
@@ -92,7 +150,9 @@
 <li>ラズパイ一式</li>
 <li>USBカメラ</li>
 </ul>
-<h2 id="motionの導入">motionの導入</h2><p>パッケージを更新し、motionをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install motion</span><br></pre></td></tr></table></figure></p>
+<img src="/2015/12/09/004_raspi-camera1/raspi.png" alt="用意するもの" title="用意するもの">
+<h2 id="motionの導入">motionの導入</h2><p>まずパッケージを更新。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>motionをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install motion</span><br></pre></td></tr></table></figure></p>
 <h2 id="motionの設定">motionの設定</h2><p>motionの設定は、motion.confで変えることができます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/motion/motion.conf</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><p><strong>daemon</strong> off<br>デーモンモードで起動するか設定します。<br>この時点ではoffにしておきます。</p>
@@ -122,12 +182,13 @@
 </ul>
 <h2 id="motionの起動">motionの起動</h2><p>motionを起動します<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo motion</span><br></pre></td></tr></table></figure></p>
 <p>起動後、撮影している画面内で動きが検知されると、aviファイルとして保存されます。</p>
-<p>また、ブラウザからラズパイのIPアドレスの8081ポートにアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
+<img src="/2015/12/09/004_raspi-camera1/motion.png" alt="保存されたaviファイル" title="保存されたaviファイル">
+<p>また、ブラウザからhttp&#x3a;//[ラズパイのIPアドレス]:8081にアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cihyzn67y0003zyik34hzxd1u" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cii4quy0x00064mikwpfwewlu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
@@ -197,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cihyzn6830006zyik39d0qezk" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cii4quy1600084mikm8aahehq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
@@ -247,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cihyzn6890008zyikpm1jiev7" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cii4quy1j000a4mik7xaeutdk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -305,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/" data-id="cihyzn67n0000zyiklr7l0yhg" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/" data-id="cii4quy0h00004mik3678ojoc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -328,7 +389,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -337,7 +398,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RaspberryPi/" style="font-size: 10px;">RaspberryPi</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+      <a href="/tags/RaspberryPi/" style="font-size: 20px;">RaspberryPi</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
   </div>
 
@@ -346,7 +407,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -356,6 +417,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
+          </li>
         
           <li>
             <a href="/2015/12/09/004_raspi-camera1/">ラズパイで多機能監視カメラを作る(1)</a>

@@ -10,7 +10,9 @@
 ラズパイ一式
 USBカメラ
 
-motionの導入パッケージを更新し、motionをインストールします。123$ sudo apt-get update$ sudo apt-get upgr">
+
+motionの導入まずパッケージを更新。12$ sudo apt-get update$ sudo apt-get upgrade
+motionをインストー">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ラズパイで多機能監視カメラを作る(1)">
 <meta property="og:url" content="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/index.html">
@@ -20,8 +22,12 @@ motionの導入パッケージを更新し、motionをインストールしま�
 ラズパイ一式
 USBカメラ
 
-motionの導入パッケージを更新し、motionをインストールします。123$ sudo apt-get update$ sudo apt-get upgr">
-<meta property="og:updated_time" content="2015-12-09T15:30:31.000Z">
+
+motionの導入まずパッケージを更新。12$ sudo apt-get update$ sudo apt-get upgrade
+motionをインストー">
+<meta property="og:image" content="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/raspi.png">
+<meta property="og:image" content="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/motion.png">
+<meta property="og:updated_time" content="2015-12-13T17:24:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ラズパイで多機能監視カメラを作る(1)">
 <meta name="twitter:description" content="ラズパイを使って、監視カメラを作ってみます。監視カメラはいろいろな方法で実現できるのですが、今回はmotionを使います。motionを使うことで、動体検知や映像のストリーミングが簡単に行えます。
@@ -29,7 +35,9 @@ motionの導入パッケージを更新し、motionをインストールしま�
 ラズパイ一式
 USBカメラ
 
-motionの導入パッケージを更新し、motionをインストールします。123$ sudo apt-get update$ sudo apt-get upgr">
+
+motionの導入まずパッケージを更新。12$ sudo apt-get update$ sudo apt-get upgrade
+motionをインストー">
   
     <link rel="alternative" href="/atom.xml" title="&lt;urouro&gt;" type="application/atom+xml">
   
@@ -106,7 +114,9 @@ motionの導入パッケージを更新し、motionをインストールしま�
 <li>ラズパイ一式</li>
 <li>USBカメラ</li>
 </ul>
-<h2 id="motionの導入">motionの導入</h2><p>パッケージを更新し、motionをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br><span class="line">$ sudo apt-get install motion</span><br></pre></td></tr></table></figure></p>
+<img src="/2015/12/09/004_raspi-camera1/raspi.png" alt="用意するもの" title="用意するもの">
+<h2 id="motionの導入">motionの導入</h2><p>まずパッケージを更新。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure></p>
+<p>motionをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install motion</span><br></pre></td></tr></table></figure></p>
 <h2 id="motionの設定">motionの設定</h2><p>motionの設定は、motion.confで変えることができます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/motion/motion.conf</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><p><strong>daemon</strong> off<br>デーモンモードで起動するか設定します。<br>この時点ではoffにしておきます。</p>
@@ -136,12 +146,13 @@ motionの導入パッケージを更新し、motionをインストールしま�
 </ul>
 <h2 id="motionの起動">motionの起動</h2><p>motionを起動します<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo motion</span><br></pre></td></tr></table></figure></p>
 <p>起動後、撮影している画面内で動きが検知されると、aviファイルとして保存されます。</p>
-<p>また、ブラウザからラズパイのIPアドレスの8081ポートにアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
+<img src="/2015/12/09/004_raspi-camera1/motion.png" alt="保存されたaviファイル" title="保存されたaviファイル">
+<p>また、ブラウザからhttp&#x3a;//[ラズパイのIPアドレス]:8081にアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cihyzn67y0003zyik34hzxd1u" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cii4quy0x00064mikwpfwewlu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
@@ -151,6 +162,15 @@ motionの導入パッケージを更新し、motionをインストールしま�
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/12/14/005-raspi-camera2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ラズパイで多機能監視カメラを作る(2)
+        
+      </div>
+    </a>
   
   
     <a href="/2015/11/05/003_how-to-volumio/" id="article-nav-older" class="article-nav-link-wrap">
@@ -173,7 +193,7 @@ motionの導入パッケージを更新し、motionをインストールしま�
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -182,7 +202,7 @@ motionの導入パッケージを更新し、motionをインストールしま�
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RaspberryPi/" style="font-size: 10px;">RaspberryPi</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+      <a href="/tags/RaspberryPi/" style="font-size: 20px;">RaspberryPi</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
   </div>
 
@@ -191,7 +211,7 @@ motionの導入パッケージを更新し、motionをインストールしま�
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -201,6 +221,10 @@ motionの導入パッケージを更新し、motionをインストールしま�
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
+          </li>
         
           <li>
             <a href="/2015/12/09/004_raspi-camera1/">ラズパイで多機能監視カメラを作る(1)</a>
