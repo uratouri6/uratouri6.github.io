@@ -6,27 +6,24 @@
   <title>hexoでブログを作る(2) | &lt;urouro&gt;</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前回の記事の続きです。
-_config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
-編集例（このサイトの場合）
-1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-他の要素などについて">
+作成したブログをGithub Pagesで公開するGithub Pagesにアップロードするために、gitのdeployerをインストールします。1$ npm install hexo-deployer-git --save
+_config.ymlのDeploymentを以下のように編集します。
+123456# Deployment## Docs: http://hexo.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexoでブログを作る(2)">
 <meta property="og:url" content="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/index.html">
 <meta property="og:site_name" content="<urouro>">
 <meta property="og:description" content="前回の記事の続きです。
-_config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
-編集例（このサイトの場合）
-1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-他の要素などについて">
-<meta property="og:updated_time" content="2015-12-09T15:20:15.000Z">
+作成したブログをGithub Pagesで公開するGithub Pagesにアップロードするために、gitのdeployerをインストールします。1$ npm install hexo-deployer-git --save
+_config.ymlのDeploymentを以下のように編集します。
+123456# Deployment## Docs: http://hexo.">
+<meta property="og:updated_time" content="2015-12-15T15:42:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexoでブログを作る(2)">
 <meta name="twitter:description" content="前回の記事の続きです。
-_config.ymlの編集_config.ymlを編集することで、ブログの名前などの変更が可能。
-編集例（このサイトの場合）
-1234567# Sitetitle: &amp;lt;urouro&amp;gt;subtitle: 村田製作場日誌description: author: uratouri6language: jatimezone: Asia/Tokyo
-他の要素などについて">
+作成したブログをGithub Pagesで公開するGithub Pagesにアップロードするために、gitのdeployerをインストールします。1$ npm install hexo-deployer-git --save
+_config.ymlのDeploymentを以下のように編集します。
+123456# Deployment## Docs: http://hexo.">
   
     <link rel="alternative" href="/atom.xml" title="&lt;urouro&gt;" type="application/atom+xml">
   
@@ -99,22 +96,20 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
     <div class="article-entry" itemprop="articleBody">
       
         <p>前回の記事の続きです。</p>
-<h2 id="_config-ymlの編集">_config.ymlの編集</h2><p>_config.ymlを編集することで、ブログの名前などの変更が可能。</p>
-<p>編集例（このサイトの場合）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: &lt;urouro&gt;</span><br><span class="line">subtitle: 村田製作場日誌</span><br><span class="line">description: </span><br><span class="line">author: uratouri6</span><br><span class="line">language: ja</span><br><span class="line">timezone: Asia/Tokyo</span><br></pre></td></tr></table></figure>
-<p>他の要素などについて、詳しくは<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">ここ。</a></p>
-<h2 id="記事を書く">記事を書く</h2><p>新しい記事の追加。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [記事タイトル]</span><br></pre></td></tr></table></figure></p>
-<p>source/_postsに[記事タイトル].mdが追加されているので、これを編集する。</p>
-<p>Markdownで書けるので、非常に楽。</p>
-<h2 id="テーマのインストール">テーマのインストール</h2><p>ブログの見た目を変えたい場合は、公開されているテーマをインストールする。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [テーマのURL] themes</span><br></pre></td></tr></table></figure></p>
-<p>_config.ymlファイルを編集し、テーマを適応する。</p>
+<h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>Github Pagesにアップロードするために、gitのdeployerをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>_config.ymlのDeploymentを以下のように編集します。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[ユーザーのID]/[ユーザーのID].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>以下のコマンドで、htmlの生成からGithubへのアップロードまで自動で行ってくれます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure></p>
+<p>Github Pagesの自分のページを確認してみると、ブログがアップされています。<br>タイムラグがあるので、数分後に更新されます。</p>
+<h2 id="テーマのインストール">テーマのインストール</h2><p>ブログの見た目を変えたい場合は、公開されているテーマをインストールする方法が簡単です。<br>「hexo theme」と検索すると、たくさんのテーマを見つけることができます。<br>お気に入りのテーマが見つかったら、以下のコマンドからダウンロードしてみましょう。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [テーマのURL] themes</span><br></pre></td></tr></table></figure></p>
+<p>_config.ymlファイルを編集し、ダウンロードしたテーマを適応します。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</span></span><br><span class="line"><span class="comment">## Themes: https://github.com/hexojs/hexo/wiki/Themes</span></span><br><span class="line">theme: [インストールしたテーマ名]</span><br><span class="line">exclude_generator:</span><br></pre></td></tr></table></figure>
-<p>themesフォルダ内を編集することで、自作することも可能。</p>
+<p>もちろん、themesフォルダ内を編集することで、テーマを自作することも可能です。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cii4quy1j000a4mik7xaeutdk" class="article-share-link">Share</a>
+      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cii7icql60009stik9u87yahr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -155,7 +150,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -173,7 +168,7 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -183,6 +178,10 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/15/006-raspi-camera3/">ラズパイで多機能監視カメラを作る(3)</a>
+          </li>
         
           <li>
             <a href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
@@ -198,10 +197,6 @@ _config.ymlの編集_config.ymlを編集することで、ブログの名前な�
         
           <li>
             <a href="/2015/11/04/002_how-to-hexo2/">hexoでブログを作る(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/04/001_how-to-hexo1/">hexoでブログを作る(1)</a>
           </li>
         
       </ul>

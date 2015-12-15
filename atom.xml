@@ -1,93 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[<urouro>]]></title>
+  <subtitle><![CDATA[村田製作場日誌]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://uratouri6.github.io/"/>
+  <updated>2015-12-15T05:32:49.000Z</updated>
+  <id>http://uratouri6.github.io/</id>
   
-  <title>&lt;urouro&gt;</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="<urouro>">
-<meta property="og:url" content="http://uratouri6.github.io/index.html">
-<meta property="og:site_name" content="<urouro>">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="<urouro>">
-<meta name="twitter:description">
-  
-    <link rel="alternative" href="/atom.xml" title="&lt;urouro&gt;" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
-</head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">&lt;urouro&gt;</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">村田製作場日誌</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://uratouri6.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-006-raspi-camera3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/15/006-raspi-camera3/" class="article-date">
-  <time datetime="2015-12-15T03:47:12.000Z" itemprop="datePublished">2015-12-15</time>
-</a>
+  <author>
+    <name><![CDATA[uratouri6]]></name>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  </author>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/15/006-raspi-camera3/">ラズパイで多機能監視カメラを作る(3)</a>
-    </h1>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今回は、保存した映像を自動でDropboxにアップロードするようにします。<br>Dropboxに保存することで、PCやスマートフォンでいつでも映像を見れるようになります。</p>
+  <entry>
+    <title><![CDATA[ラズパイで多機能監視カメラを作る(3)]]></title>
+    <link href="http://uratouri6.github.io/2015/12/15/006-raspi-camera3/"/>
+    <id>http://uratouri6.github.io/2015/12/15/006-raspi-camera3/</id>
+    <published>2015-12-15T03:47:12.000Z</published>
+    <updated>2015-12-15T05:32:49.000Z</updated>
+    <content type="html"><![CDATA[<p>今回は、保存した映像を自動でDropboxにアップロードするようにします。<br>Dropboxに保存することで、PCやスマートフォンでいつでも映像を見れるようになります。</p>
 <h2 id="App_Key、App_secretの取得">App Key、App secretの取得</h2><p>ラズパイからDropboxに接続するために、App KeyとApp secretを取得します。</p>
 <p>Dropboxのアカウントを作成し、以下のURLにアクセスします。<br><a href="https://www.dropbox.com/developers/apps" target="_blank" rel="external">https://www.dropbox.com/developers/apps</a></p>
 <p>ページ右上のCreate appをクリックし、以下のように設定します。</p>
@@ -114,45 +47,23 @@
 <p>motionを起動します。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo motion</span><br></pre></td></tr></table></figure></p>
 <p>motionの撮影が終わると、Dropboxのmotionフォルダに映像が保存され、PCやスマートフォンから映像を見れるようになります。</p>
 <img src="/2015/12/15/006-raspi-camera3/drop3.png" alt="motionフォルダ" title="motionフォルダ">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/15/006-raspi-camera3/" data-id="cii7icqjh0000stikx4zhnnre" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-005-raspi-camera2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/14/005-raspi-camera2/" class="article-date">
-  <time datetime="2015-12-13T16:10:23.000Z" itemprop="datePublished">2015-12-14</time>
-</a>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今回は、保存した映像を自動でDropboxにアップロードするようにします。<br>Dropboxに保存することで、PCやスマートフォンでいつでも映像を見れるようになります。</p>
+<h2 id="App_Key、App_secretの取得">App Key、App sec]]>
+    </summary>
     
-  </div>
-  <div class="article-inner">
+      <category term="RaspberryPi" scheme="http://uratouri6.github.io/tags/RaspberryPi/"/>
     
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前回までの作業では、限られたブラウザでしか映像を見ることができませんでした。<br>今回は、他のブラウザやスマートフォンで映像を見れるようにします。<br>また、動きを検知した時にスピーカーから音を鳴らすようにします。</p>
+  <entry>
+    <title><![CDATA[ラズパイで多機能監視カメラを作る(2)]]></title>
+    <link href="http://uratouri6.github.io/2015/12/14/005-raspi-camera2/"/>
+    <id>http://uratouri6.github.io/2015/12/14/005-raspi-camera2/</id>
+    <published>2015-12-13T16:10:23.000Z</published>
+    <updated>2015-12-13T17:28:09.000Z</updated>
+    <content type="html"><![CDATA[<p>前回までの作業では、限られたブラウザでしか映像を見ることができませんでした。<br>今回は、他のブラウザやスマートフォンで映像を見れるようにします。<br>また、動きを検知した時にスピーカーから音を鳴らすようにします。</p>
 <h2 id="追加で用意するもの">追加で用意するもの</h2><ul>
 <li>スピーカー</li>
 </ul>
@@ -172,45 +83,23 @@
 <p>motion.confを編集します。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/motion/motion.conf</span><br></pre></td></tr></table></figure></p>
 <p>600行目あたりにある、on_movie_startを編集します。<br>on_movie_startは、動体を検知したタイミングで動作するため、ここで音を鳴らすように設定します。<br>aplayはwavファイルを再生するコマンドです。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">on_movie_start <span class="string">"aplay /home/pi/motion/alert.wav"</span></span><br></pre></td></tr></table></figure></p>
 <p>これで、動体検知時にスピーカーから音が鳴るようになりました。<br>スピーカーの音量は、alsamixerコマンド等から設定できます。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alsamixer</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/14/005-raspi-camera2/" data-id="cii7icqk90003stik5l3ek46i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-004_raspi-camera1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/09/004_raspi-camera1/" class="article-date">
-  <time datetime="2015-12-09T07:40:31.000Z" itemprop="datePublished">2015-12-09</time>
-</a>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前回までの作業では、限られたブラウザでしか映像を見ることができませんでした。<br>今回は、他のブラウザやスマートフォンで映像を見れるようにします。<br>また、動きを検知した時にスピーカーから音を鳴らすようにします。</p>
+<h2 id="追加で用意するもの">追加で用]]>
+    </summary>
     
-  </div>
-  <div class="article-inner">
+      <category term="RaspberryPi" scheme="http://uratouri6.github.io/tags/RaspberryPi/"/>
     
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/09/004_raspi-camera1/">ラズパイで多機能監視カメラを作る(1)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ラズパイを使って、監視カメラを作ってみます。<br>監視カメラはいろいろな方法で実現できるのですが、今回はmotionを使います。<br>motionを使うことで、動体検知や映像のストリーミングが簡単に行えます。</p>
+  <entry>
+    <title><![CDATA[ラズパイで多機能監視カメラを作る(1)]]></title>
+    <link href="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/"/>
+    <id>http://uratouri6.github.io/2015/12/09/004_raspi-camera1/</id>
+    <published>2015-12-09T07:40:31.000Z</published>
+    <updated>2015-12-13T17:24:19.000Z</updated>
+    <content type="html"><![CDATA[<p>ラズパイを使って、監視カメラを作ってみます。<br>監視カメラはいろいろな方法で実現できるのですが、今回はmotionを使います。<br>motionを使うことで、動体検知や映像のストリーミングが簡単に行えます。</p>
 <h2 id="用意するもの">用意するもの</h2><ul>
 <li>ラズパイ一式</li>
 <li>USBカメラ</li>
@@ -249,45 +138,23 @@
 <p>起動後、撮影している画面内で動きが検知されると、aviファイルとして保存されます。</p>
 <img src="/2015/12/09/004_raspi-camera1/motion.png" alt="保存されたaviファイル" title="保存されたaviファイル">
 <p>また、ブラウザからhttp&#x3a;//[ラズパイのIPアドレス]:8081にアクセスすると、ストリーミング配信を見ることができます。<br>しかし、この時点では限られたブラウザ（Firefox,Safari等）でしか見ることができません。<br>次回はこの点について進めていこうと思います。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/12/09/004_raspi-camera1/" data-id="cii7icqkm0005stikjt1fs4xs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-003_how-to-volumio" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/05/003_how-to-volumio/" class="article-date">
-  <time datetime="2015-11-04T17:15:28.000Z" itemprop="datePublished">2015-11-05</time>
-</a>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>ラズパイを使って、監視カメラを作ってみます。<br>監視カメラはいろいろな方法で実現できるのですが、今回はmotionを使います。<br>motionを使うことで、動体検知や映像のストリーミングが簡単に行えます。</p>
+<h2 id="用意するもの">用意するもの</h2]]>
+    </summary>
     
-  </div>
-  <div class="article-inner">
+      <category term="RaspberryPi" scheme="http://uratouri6.github.io/tags/RaspberryPi/"/>
     
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/05/003_how-to-volumio/">ラズパイでネットワークミュージックプレイヤーを作る</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、<br>音質の劣化や反応の遅れがあり、Volumioを導入することにしました。</p>
+  <entry>
+    <title><![CDATA[ラズパイでネットワークミュージックプレイヤーを作る]]></title>
+    <link href="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/"/>
+    <id>http://uratouri6.github.io/2015/11/05/003_how-to-volumio/</id>
+    <published>2015-11-04T17:15:28.000Z</published>
+    <updated>2015-12-09T15:49:50.000Z</updated>
+    <content type="html"><![CDATA[<p>昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、<br>音質の劣化や反応の遅れがあり、Volumioを導入することにしました。</p>
 <h2 id="必要機材">必要機材</h2><ul>
 <li>Raspberry Pi（今回はB+を使用）</li>
 <li>SDカード</li>
@@ -319,45 +186,24 @@
 <p>Volumio.localの左下にあるBrowseからUSBを選び、再生したい曲をプレイリストに登録すると、再生できるようになります。</p>
 <p>再生についての操作は、Volumio.localから行います。<br>iPhoneからVolumio.localにアクセスした場合でも、同様に操作することができます。</p>
 <img src="/2015/11/05/003_how-to-volumio/iPhone.png" alt="iPhoneからの操作" title="iPhoneからの操作">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/05/003_how-to-volumio/" data-id="cii7icqkv0007stikx513o1fj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-002_how-to-hexo2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/04/002_how-to-hexo2/" class="article-date">
-  <time datetime="2015-11-04T06:07:45.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>昨年から、ラズパイをAirPlayレシーバーにし、接続したスピーカーから音楽を再生していたのですが、<br>音質の劣化や反応の遅れがあり、Volumioを導入することにしました。</p>
+<h2 id="必要機材">必要機材</h2><ul>
+<li>Raspberry P]]>
+    </summary>
     
-  </div>
-  <div class="article-inner">
+      <category term="RaspberryPi" scheme="http://uratouri6.github.io/tags/RaspberryPi/"/>
     
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/002_how-to-hexo2/">hexoでブログを作る(2)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前回の記事の続きです。</p>
+  <entry>
+    <title><![CDATA[hexoでブログを作る(2)]]></title>
+    <link href="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/"/>
+    <id>http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/</id>
+    <published>2015-11-04T06:07:45.000Z</published>
+    <updated>2015-12-15T15:42:41.000Z</updated>
+    <content type="html"><![CDATA[<p>前回の記事の続きです。</p>
 <h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>Github Pagesにアップロードするために、gitのdeployerをインストールします。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>_config.ymlのDeploymentを以下のように編集します。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:[ユーザーのID]/[ユーザーのID].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
@@ -367,45 +213,23 @@
 <p>_config.ymlファイルを編集し、ダウンロードしたテーマを適応します。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</span></span><br><span class="line"><span class="comment">## Themes: https://github.com/hexojs/hexo/wiki/Themes</span></span><br><span class="line">theme: [インストールしたテーマ名]</span><br><span class="line">exclude_generator:</span><br></pre></td></tr></table></figure>
 <p>もちろん、themesフォルダ内を編集することで、テーマを自作することも可能です。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/002_how-to-hexo2/" data-id="cii7icql60009stik9u87yahr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-001_how-to-hexo1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/04/001_how-to-hexo1/" class="article-date">
-  <time datetime="2015-11-03T17:03:16.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前回の記事の続きです。</p>
+<h2 id="作成したブログをGithub_Pagesで公開する">作成したブログをGithub Pagesで公開する</h2><p>Github Pagesにアップロードするために、gitのdeployerをインストールします。<br><]]>
+    </summary>
     
-  </div>
-  <div class="article-inner">
+      <category term="hexo" scheme="http://uratouri6.github.io/tags/hexo/"/>
     
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/001_how-to-hexo1/">hexoでブログを作る(1)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。</p>
+  <entry>
+    <title><![CDATA[hexoでブログを作る(1)]]></title>
+    <link href="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/"/>
+    <id>http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/</id>
+    <published>2015-11-03T17:03:16.000Z</published>
+    <updated>2015-12-15T15:39:18.000Z</updated>
+    <content type="html"><![CDATA[<p>日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。</p>
 <h2 id="hexoとは">hexoとは</h2><p>hexo とは、node.js で作成された静的サイトジェネレータです。</p>
 <p>Github Pagesと組み合わせることで、簡単にブログを作ることができます。</p>
 <h2 id="環境構築">環境構築</h2><ul>
@@ -429,119 +253,15 @@
 <img src="/2015/11/04/001_how-to-hexo1/md.png" alt="記事の作成" title="記事の作成">
 <p>記事を書いたら、サーバーを立ち上げてブログを確認しましょう。</p>
 <p>次回は、Github Pagesでのブログ公開についてやっていきます。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://uratouri6.github.io/2015/11/04/001_how-to-hexo1/" data-id="cii7icql9000cstikq0qy63cc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-</section>
-        
-          <aside id="sidebar">
-  
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>日々の活動をまとめたブログを作るため、hexoを導入しました。導入までの過程を簡単にまとめておきます。</p>
+<h2 id="hexoとは">hexoとは</h2><p>hexo とは、node.js で作成された静的サイトジェネレータです。</p>
+<p>Github ]]>
+    </summary>
     
-  
+      <category term="hexo" scheme="http://uratouri6.github.io/tags/hexo/"/>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RaspberryPi/">RaspberryPi</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li></ul>
-    </div>
-  </div>
-
+  </entry>
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/RaspberryPi/" style="font-size: 20px;">RaspberryPi</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">12月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">11月 2015</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2015/12/15/006-raspi-camera3/">ラズパイで多機能監視カメラを作る(3)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/14/005-raspi-camera2/">ラズパイで多機能監視カメラを作る(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/09/004_raspi-camera1/">ラズパイで多機能監視カメラを作る(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/05/003_how-to-volumio/">ラズパイでネットワークミュージックプレイヤーを作る</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/04/002_how-to-hexo2/">hexoでブログを作る(2)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2015 uratouri6<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
-      &lt;/urouro&gt;
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-
-  </div>
-</body>
-</html>
+</feed>
