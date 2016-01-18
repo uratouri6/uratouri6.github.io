@@ -4,7 +4,7 @@
   <subtitle><![CDATA[村田製作場日誌]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://uratouri6.github.io/"/>
-  <updated>2015-12-15T05:32:49.000Z</updated>
+  <updated>2016-01-18T16:24:48.000Z</updated>
   <id>http://uratouri6.github.io/</id>
   
   <author>
@@ -13,6 +13,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[MPCサテライトハンドレビュー]]></title>
+    <link href="http://uratouri6.github.io/2016/01/18/007-pokermpcst/"/>
+    <id>http://uratouri6.github.io/2016/01/18/007-pokermpcst/</id>
+    <published>2016-01-18T14:52:43.000Z</published>
+    <updated>2016-01-18T16:24:48.000Z</updated>
+    <content type="html"><![CDATA[<p>今回は、趣味でやってるポーカーの記事です。<br>自分のプレイを振り返るという内容なので、読んでも面白くはないでしょう。</p>
+<img src="/2016/01/18/007-pokermpcst/mega.jpg" alt="MPCサテライト" title="MPCサテライト">
+<p>今回ハンドレビューするのは、1月17日にオンラインで行われた、MPC（マカオポーカーカップ）メインイベント予選です。<br>この予選の予選も行われており、そちらは3回目くらいで通過しました。</p>
+<p>参加80人、上位5人が合計2100ドル相当のパッケージ（MPCメインイベントの参加権利とホテル5泊）を獲得します。</p>
+<p>ある程度のチップが動いたハンドを見ていきます。</p>
+<h2 id="最初のハンド">最初のハンド</h2><p>BTN: 1,500 (VPIP: 10.00, PFR: 6.25, 3Bet Preflop: 0.00, Hands: 20)<br>SB: 1,500<br>BB: 1,500 (VPIP: 25.00, PFR: 20.00, 3Bet Preflop: 0.00, Hands: 8)<br>UTG: 1,500 (VPIP: 0.00, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 32)<br>UTG+1: 1,500 (VPIP: 21.88, PFR: 24.14, 3Bet Preflop: 20.00, Hands: 34)<br>MP: 1,500<br>Hero (MP+1): 1,500<br>CO: 1,500</p>
+<p>SB posts SB 10, BB posts BB 20</p>
+<p>Pre Flop: (pot: 30) Hero has Qs Ah<br>fold, UTG+1 raises to 45, fold, Hero raises to 120, fold, fold, fold, fold, fold</p>
+<p>Hero wins 120</p>
+<hr>
+<p>予選スタートして最初のハンドがAQsでした。<br>UTG+1が2.5BBでオープンしていたので悩みましたが、3BET打ったら降りてくれました。<br>スタート時からスタックが75BBしかないので、プリフロが大事ですね。</p>
+<hr>
+<h2 id="フロップでセット">フロップでセット</h2><p>CO: 1,560 (VPIP: 22.22, PFR: 22.22, 3Bet Preflop: 0.00, Hands: 9)<br>BTN: 1,340 (VPIP: 17.65, PFR: 7.14, 3Bet Preflop: 0.00, Hands: 17)<br>SB: 1,480 (VPIP: 0.00, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 1)<br>BB: 1,385 (VPIP: 21.95, PFR: 21.05, 3Bet Preflop: 12.50, Hands: 43)<br>UTG: 1,450 (VPIP: 33.33, PFR: 22.22, 3Bet Preflop: 0.00, Hands: 9)<br>UTG+1: 2,519 (VPIP: 33.33, PFR: 33.33, 3Bet Preflop: 100.00, Hands: 3)<br>Hero (MP): 1,575<br>MP+1: 601 (VPIP: 22.22, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 9)</p>
+<p>SB posts SB 10, BB posts BB 20</p>
+<p>Pre Flop: (pot: 30) Hero has 5d 5h<br>fold, fold, Hero raises to 49, fold, fold, BTN calls 49, fold, fold</p>
+<p>Flop : (128, 2 players) Jc 7c 5c<br>Hero bets 58, BTN raises to 220, Hero calls 162</p>
+<p>Turn : (568, 2 players) Ac<br>Hero checks, BTN checks</p>
+<p>River : (568, 2 players) 2h<br>Hero checks, BTN checks</p>
+<p>Hero shows 5d 5h (Three of a Kind, Fives)<br> (Pre 19%, Flop 7%, Turn 13%)</p>
+<p>BTN shows 7d 7s (Three of a Kind, Sevens)<br> (Pre 81%, Flop 93%, Turn 88%)</p>
+<p>BTN wins 568</p>
+<hr>
+<p>開始早々難しい場面。<br>55でオープンすると、BTNがコール。<br>フロップでセットが完成するも、3枚ともクラブ！<br>とりあえずCBを打ちましたが、レイズされました。<br>ここで悩んだのですが、コールにしました。<br>するとターンでAc！さらに難しい状況に。チェックしたら相手もチェック。<br>リバーはラグで、どちらもチェックでショーダウン。</p>
+<p>相手もフロップでセットだったようです。フロップのスートがバラバラだったり、ターン以降でフルハウスになっていたらここで終わっていましたね。<br>ただ、リーバーで打てば降ろせたでしょうし、なかなか難しいところでした。<br>上手い人の意見を聞きたいですね。</p>
+<hr>
+<h2 id="ブラインドバトルでQQ">ブラインドバトルでQQ</h2><p>UTG: 1,560 (VPIP: 15.38, PFR: 15.38, 3Bet Preflop: 0.00, Hands: 13)<br>UTG+1: 1,639 (VPIP: 19.05, PFR: 5.56, 3Bet Preflop: 0.00, Hands: 21)<br>MP: 1,190 (VPIP: 60.00, PFR: 60.00, 3Bet Preflop: 0.00, Hands: 5)<br>MP+1: 1,435 (VPIP: 22.22, PFR: 21.43, 3Bet Preflop: 16.67, Hands: 47)<br>CO: 1,710 (VPIP: 30.77, PFR: 23.08, 3Bet Preflop: 20.00, Hands: 13)<br>BTN: 2,489 (VPIP: 14.29, PFR: 14.29, 3Bet Preflop: 100.00, Hands: 7)<br>Hero (SB): 1,286<br>BB: 601 (VPIP: 15.38, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 13)</p>
+<p>Hero posts SB 10, BB posts BB 20</p>
+<p>Pre Flop: (pot: 30) Hero has Qc Qs<br>fold, fold, fold, fold, fold, fold, Hero raises to 55, BB calls 35</p>
+<p>Flop : (110, 2 players) Tc Ts 5h<br>Hero checks, BB bets 60, Hero calls 60</p>
+<p>Turn : (230, 2 players) 4c<br>Hero checks, BB checks</p>
+<p>River : (230, 2 players) 9c<br>Hero checks, BB bets 140, Hero calls 140</p>
+<p>BB shows 6d 9s (Two Pair, Tens and Nines)<br> (Pre 15%, Flop 2%, Turn 0%)</p>
+<p>Hero shows Qc Qs (Two Pair, Queens and Tens)<br> (Pre 85%, Flop 98%, Turn 100%)</p>
+<p>Hero wins 510</p>
+<hr>
+<p>序盤はハンドの入りが良く、SBでQQ。<br>全員降りたので、ブラインドバトル。レイズするとコールされました。<br>フロップはこれまた難しく、Tが二枚。CBするか迷いましたが、とりあえずチェック。<br>するとBBがベット、これをコール。<br>ターンはお互いチェックで、リバーでBBのベットをコール。</p>
+<p>このハンドではフロップでCBを打つかどうかがポイントだと思います。<br>打っていた場合は普通に降りられていたでしょう。<br>打たなかったことでブラフをキャッチし、利益を得ることができました。</p>
+<hr>
+<h2 id="VSショートスタック">VSショートスタック</h2><p>UTG+1: 2,076 (VPIP: 20.00, PFR: 15.00, 3Bet Preflop: 0.00, Hands: 20)<br>MP: 1,594 (VPIP: 14.29, PFR: 4.00, 3Bet Preflop: 0.00, Hands: 28)<br>MP+1: 1,100 (VPIP: 33.33, PFR: 25.00, 3Bet Preflop: 0.00, Hands: 12)<br>CO: 1,630 (VPIP: 23.08, PFR: 20.41, 3Bet Preflop: 14.29, Hands: 54)<br>BTN: 1,545 (VPIP: 30.00, PFR: 25.00, 3Bet Preflop: 14.29, Hands: 20)<br>SB: 1,943 (VPIP: 21.43, PFR: 14.29, 3Bet Preflop: 25.00, Hands: 14)<br>Hero (BB): 1,586<br>UTG: 436 (VPIP: 20.00, PFR: 5.00, 3Bet Preflop: 12.50, Hands: 20)</p>
+<p>SB posts SB 15, Hero posts BB 30</p>
+<p>Pre Flop: (pot: 45) Hero has Ts Jd<br>UTG raises to 60, fold, fold, fold, fold, fold, fold, Hero calls 30</p>
+<p>Flop : (135, 2 players) 6d 4h Td<br>Hero checks, UTG bets 90, Hero raises to 1,526 and is all-in, fold</p>
+<p>Hero wins 315</p>
+<hr>
+<p>ショートスタックのUTGがオープン。<br>普通に降りてもいいのですが、ミニマムレイズだったのでコールしてみました。<br>フロップでTがヒットし、相手のレンジより有利と判断しCBにレイズをすると、相手は降りました。</p>
+<hr>
+<h2 id="再びのTJ">再びのTJ</h2><p>UTG+1: 2,402 (VPIP: 25.86, PFR: 22.81, 3Bet Preflop: 0.00, Hands: 59)<br>MP: 2,080 (VPIP: 25.37, PFR: 23.08, 3Bet Preflop: 7.69, Hands: 67)<br>MP+1: 1,400 (VPIP: 0.00, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 9)<br>CO: 850 (VPIP: 12.50, PFR: 4.55, 3Bet Preflop: 0.00, Hands: 24)<br>BTN: 4,577 (VPIP: 20.41, PFR: 16.84, 3Bet Preflop: 8.82, Hands: 101)<br>SB: 2,543 (VPIP: 14.75, PFR: 9.84, 3Bet Preflop: 13.04, Hands: 61)<br>Hero (BB): 1,934<br>UTG: 749 (VPIP: 16.92, PFR: 13.33, 3Bet Preflop: 10.53, Hands: 67)</p>
+<p>SB posts SB 75, Hero posts BB 150</p>
+<p>Pre Flop: (pot: 225) Hero has Th Jh<br>fold, fold, MP raises to 300, fold, fold, fold, fold, Hero calls 150</p>
+<p>Flop : (675, 2 players) 8d Jc 9d<br>Hero checks, MP bets 449, Hero raises to 1,634 and is all-in, fold</p>
+<p>Hero wins 1,573</p>
+<hr>
+<p>再びBBでTJ。<br>MPのオープンにコール。降りてもいいのですが、先ほどと同じようにミリマムレイズだったのでコール。<br>フロップでトップヒットストレートドロー。相手のCBにレイズオールインで降ろしました。<br>フロップに恵まれているようです。</p>
+<hr>
+<h2 id="入賞直前">入賞直前</h2><p>ここから先はブラインドが大きくなり、Push or Foldのプレイヤーがほとんどでした。<br>ハンドには恵まれ、残り6人、あと一人飛べば入賞という状況に。<br>そして下のハンド。</p>
+<p>SB: 19,232 (VPIP: 24.47, PFR: 21.05, 3Bet Preflop: 13.64, Hands: 96)<br>BB: 19,233 (VPIP: 21.43, PFR: 20.00, 3Bet Preflop: 7.41, Hands: 86)<br>UTG: 23,908 (VPIP: 7.69, PFR: 0.00, 3Bet Preflop: 0.00, Hands: 14)<br>Hero (MP): 15,986<br>CO: 16,187 (VPIP: 11.76, PFR: 13.33, 3Bet Preflop: 0.00, Hands: 17)<br>BTN: 25,454 (VPIP: 27.27, PFR: 25.81, 3Bet Preflop: 14.29, Hands: 34)</p>
+<p>6 players post ante of 125, SB posts SB 600, BB posts BB 1,200</p>
+<p>Pre Flop: (pot: 2,550) Hero has Kd Td<br>fold, Hero raises to 15,861 and is all-in, fold, BTN raises to 25,329 and is all-in, fold, fold</p>
+<p>Flop : (34,272, 2 players) Jh Kh 5d</p>
+<p>Turn : (34,272, 2 players) 3c</p>
+<p>River : (34,272, 2 players) Tc</p>
+<p>Hero shows Kd Td (Two Pair, Kings and Tens)<br> (Pre 17%, Flop 23%, Turn 11%)</p>
+<p>BTN shows Ad As (One Pair, Aces)<br> (Pre 83%, Flop 77%, Turn 89%)</p>
+<p>Hero wins 34,272</p>
+<hr>
+<p>この時点で残り6人現在6位。手に汗握る状況です。<br>プレイヤー間でチップ差はあまりありませんでしたが、最下位の私としては多くスチールしたいところでした。<br>MPでKTs、AA以外にはコールされないだろうと思いオールインすると、チップリがまさかのAA。<br>この時点で勝率は20パーセント以下、絶体絶命です。<br>諦めかけていましたが、コミュニティーカードが開くとまさかの2ペア。地獄から天国です。</p>
+<p>この後、AAを持っていた人がショートになり、そのまま飛んでしまいました。<br>AAの人の気持ちを考えると複雑ですが、なんとか入賞です。</p>
+<h3 id="やったあああああああああああああああああああああああ">やったあああああああああああああああああああああああ</h3><p>ということでまさかのマカオ行き決定！<br>初海外ライブですが、頑張りたいです！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今回は、趣味でやってるポーカーの記事です。<br>自分のプレイを振り返るという内容なので、読んでも面白くはないでしょう。</p>
+<img src="/2016/01/18/007-pokermpcst/mega.jpg" alt="MPCサテライト" title="MPC]]>
+    </summary>
+    
+      <category term="Poker" scheme="http://uratouri6.github.io/tags/Poker/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[ラズパイで多機能監視カメラを作る(3)]]></title>
